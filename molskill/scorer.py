@@ -16,7 +16,9 @@ from molskill.models.ranknet import LitRankNet
 from molskill.paths import DEFAULT_CHECKPOINT_PATH, DEFAULT_CHECKPOINT_REMOTE, ROOT_PATH
 
 LOGGER = get_logger(__name__)
-DEVICE = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+# DEVICE = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+
+DEVICE = torch.device("cpu")
 
 
 class MolSkillScorer:
